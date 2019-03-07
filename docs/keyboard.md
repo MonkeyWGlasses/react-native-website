@@ -76,7 +76,9 @@ This function then returns the reference to the listener.
 * `keyboardWillChangeFrame`
 * `keyboardDidChangeFrame`
 
-Note that if you set `android:windowSoftInputMode` to `adjustResize` or `adjustNothing`, only `keyboardDidShow` and `keyboardDidHide` events will be available on Android. `keyboardWillShow` as well as `keyboardWillHide` are generally not available on Android since there is no native corresponding event.
+Note that if you set `android:windowSoftInputMode` to `adjustResize`, only `keyboardDidShow` and `keyboardDidHide` events will be available on Android. `keyboardWillShow` as well as `keyboardWillHide` are generally not available on Android since there is no native corresponding event.
+
+Setting `android:windowSoftInputMode` to `adjustNothing` will prevent Android from receiving any of the events listed above.
 
 @param {function} callback function to be called when the event fires.
 
